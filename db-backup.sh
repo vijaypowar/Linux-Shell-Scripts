@@ -1,16 +1,16 @@
-#############################################################################
+#!/bin/bash
+# ------------------------------------------------------------------------------------------------------
+# Description: This script automates the mongoDB database backup & cleanup
 # Auther: Vijay Powar
-# This script automates the mongoDB database backup & cleanup
 # Version: v1
-#############################################################################
-set -x # Enables debug mode
-set -u # Capture uninitilised variable
-set -e # Cactures the command failure
-set -o pipefail  
+# -----------------------------------------------------------------------------------------------------
+set -x  # Enable debug mode
+set -u  # Exit on use of uninitialized variable
+set -e  # Exit on any command failure
+set -o pipefail  # Capture pipeline errors 
 # set -e will not capture the pipe failure so use set -o command with set -e 
 # set -o captures the pipe failure and prints
 
-#!/bin/bash
 current="$(date +'%d-%m-%Y_%H:%M')"
 filename="mongo_backup_$current"
 backupdir="/var/mongodb/backup/"

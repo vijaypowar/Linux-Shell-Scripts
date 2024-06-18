@@ -38,3 +38,6 @@ else
     # Certificate doesn't need renewal
     echo "$(date +"%Y-%m-%d %H:%M:%S") - Certificate for $DOMAIN is up to date, no renewal needed" >> $LOG_FILE
 fi
+
+# crontab
+0 17 * * 5 /path/to/script/ssl-cert-renewal.sh >> /var/log/ssl/ssl-cert-renewaql.log

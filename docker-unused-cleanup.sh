@@ -28,3 +28,4 @@ echo "Cleaning unused volumes older than $VOLUME_THRESHOLD..."
 docker volume prune --filter "until=$VOLUME_THRESHOLD" -f
 
 echo "Docker cleanup complete."
+

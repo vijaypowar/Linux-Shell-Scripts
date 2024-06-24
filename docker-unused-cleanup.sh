@@ -1,10 +1,9 @@
-#!/bin/bash
 # --------------------------------------------------------------------
 # Description: Clean docker unused resources based on threshold value.
 # Author: Vijay Powar
 # Version: V1
 # --------------------------------------------------------------------
-
+#!/bin/bash
 set -x  # Enable debug mode
 set -u  # Exit on use of uninitialized variable
 set -e  # Exit on any command failure
@@ -29,3 +28,5 @@ docker volume prune --filter "until=$VOLUME_THRESHOLD" -f
 
 echo "Docker cleanup complete."
 
+# Crontab // Execute this script on every sunday at 6PM
+0 18 * * 0 /path/to/script/docker-unused-cleanup.sh

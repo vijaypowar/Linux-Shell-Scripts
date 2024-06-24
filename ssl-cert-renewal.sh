@@ -1,10 +1,9 @@
-#!/bin/bash
 # ---------------------------------------------------------------------------------------------
 # Description: This script automatically Validate and Renew SSL certificate using Let’s Encrypt.
 # Author: Vijay Powar
 # Version: v1
 # ---------------------------------------------------------------------------------------------
-
+#!/bin/bash
 set -x  # Enable debug mode
 set -u  # Exit on use of uninitialized variable
 set -e  # Exit on any command failure
@@ -39,5 +38,5 @@ else
     echo "$(date +"%Y-%m-%d %H:%M:%S") - Certificate for $DOMAIN is up to date, no renewal needed" >> $LOG_FILE
 fi
 
-# crontab
+# crontab  // Execute this script on every friday at 5PM & capture the logs
 0 17 * * 5 /path/to/script/ssl-cert-renewal.sh >> /var/log/ssl/ssl-cert-renewaql.log

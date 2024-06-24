@@ -28,6 +28,5 @@ echo "operation finished at $(date +'%d-%m-%Y %H :%M:%S') ">> "$logfile"
 echo "*******" >> "$logfile"
 exit 0
 
-# Crontab
-
+# Crontab // Execute the script everyday at 12AM
 0 0 * * * /path/to/scrpt/db-backup.sh

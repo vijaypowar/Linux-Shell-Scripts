@@ -1,9 +1,10 @@
-#!/bin/bash
 # -------------------------------------------------------------------------------
 # Auther: Vijay Powar
 # This script automates the mongoDB log rotation & cleanup
 # Version: v1
 # ------------------------------------------------------------------------------
+
+#!/bin/bash
 set -x  # Enable debug mode
 set -u  # Exit on use of uninitialized variable
 set -e  # Exit on any command failure
@@ -24,5 +25,5 @@ find "$log_dir" -name "$log_prefix*" -mtime +"$max_file_age" -exec rm -rf {}\;
 
 echo "MongoDB log rotation and cleanup completed"
 
-# crontab
+# crontab // Execute this script everyday at 6PM & capture the logs
 0 18 * * * /path/to/script/db-log-rotate.sh >> /var/log/mongodb/db-log-rotate.log

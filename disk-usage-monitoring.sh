@@ -3,14 +3,12 @@
 # Author: Vijay Powar
 # Version: V1
 # --------------------------------------------------------------------
-#
+
 #!/bin/bash
 set -x  # Enable debug mode
 set -u  # Exit on use of uninitialized variable
 set -e  # Exit on any command failure
 set -o pipefail  # Capture pipeline errors
-
-#!/bin/bash
 
 # Threshold for disk usage (percentage)
 threshold=85

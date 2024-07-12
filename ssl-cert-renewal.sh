@@ -3,6 +3,7 @@
 # Author: Vijay Powar
 # Version: v1
 # ---------------------------------------------------------------------------------------------
+
 #!/bin/bash
 set -x  # Enable debug mode
 set -u  # Exit on use of uninitialized variable

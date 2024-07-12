@@ -1,9 +1,10 @@
-#!/bin/bash
 # ------------------------------------------------------------------------------------------------------
 # Description: This script automates the mongoDB database backup & cleanup
 # Auther: Vijay Powar
 # Version: v1
 # -----------------------------------------------------------------------------------------------------
+
+#!/bin/bash
 set -x  # Enable debug mode
 set -u  # Exit on use of uninitialized variable
 set -e  # Exit on any command failure
